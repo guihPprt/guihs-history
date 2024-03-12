@@ -1,3 +1,80 @@
-body{
-    background-color: black;
+:root {
+    --spd: 1s;
 }
+
+
+body{
+    display: flex;
+    flex: 1;
+    background-color: var(--bgColor);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    
+    transition: ease-in-out, var(--spd);
+}
+
+h1 {
+    color: var(--titleColor);
+    transition: ease-in-out, var(--spd);
+}
+
+label {
+    color: var(--labelColor);
+    transition: ease-in-out, var(--spd);
+}
+
+button {
+    border-radius: 65px;
+    color: var(--labelColor);
+    background-color: var(--btnBgColor);
+
+    border: none;
+
+    height: 70%;
+
+    transition: ease-in-out, var(--spd);
+}
+
+button:hover {
+    transform: scale(1.2);
+    transition: ease-in, .5s;
+}
+
+.header {
+    flex: 1;
+    flex-direction: column;
+    border-radius: 65px;
+    background-color: var(--topColor);
+    height: 50px;
+    transition: ease-in-out, var(--spd);
+}
+
+.change-theme {
+    position: relative;
+    top: -78px;
+    left: 91%;
+}
+
+
+.title {
+    position: relative;
+    top: -20px;
+    text-align: center;
+}
+
+.light-theme{
+    --bgColor: rgb(175, 175, 175);
+    --topColor: #e2e2e2;
+    --btnBgColor: rgb(211, 211, 211);
+    --labelColor: black;
+    --titleColor: rgb(104, 104, 104);
+}
+
+.dark-theme{
+    --bgColor: #303030;
+    --topColor: #424242;
+    --btnBgColor: rgb(44, 44, 44);
+    --labelColor: white;
+    --titleColor: rgb(185, 185, 185);
+}
+
